@@ -62,11 +62,97 @@ public class Ch7_practic {
         }
         System.out.println("avg  "+(double) sum/count);
     }
+    // Ques3 = Recursion sum till nth natural No check ---
+    //n=1,2,3,4,5
+    static int RecSum(int no){
+        int sum =0;
+        if (no <=1){
+            sum =1;
+        }
+        else
+            sum = no+Recno(no-1);
+        return sum;
+    }
+
+    //Ques to print Febnochi series
+    // 0,1,n+n-1,..
+    static void febo(int f){
+        if (f==0){
+
+        }
+        if (f==1){
+
+        }
+
+    }
+
+    //Quest Nth febono ===
+    //fenoci no = 0,1,1,2,3,5,8,13...
+    // F(n) = f(n-1)+f(n-2)
+    static int f(int fn){
+       if (fn==0){
+           return 0;
+       }
+        else if (fn==1){
+            return 1;
+        }
+        else
+           System.out.println(" ");
+            return f(fn-1)+f(fn-2);
+    }
+
+    //febonachi series
+    static int n1=0,n2=1,n3=0;
+    static void printFibonacci(int count){
+        if(count>0){
+            n3 = n1 + n2;
+            n1 = n2;
+            n2 = n3;
+            System.out.print(" "+n3);
+            printFibonacci(count-1);
+        }
+    }
 
 
-    //recursion approch for star ==
+    //recursion approch for star
+    /*
+    ****   //recursion *x4 recstar(3)
+    ***
+    **
+    *
+     * */
+
+    static void RecStar(int no){
+        if (no<=0){
+            return;
+        }
+        int c=no;
+        while (c>0){
+        System.out.print(" * ");
+        c--;
+        }
+        System.out.print(" ");
+        Recno(no-1);
+    }
+
+
+    //recursion rec approch for star
+    /*
+     *   //recursion * x4 recstar(2)
+     **
+     ***
+     ****
+     * */
+
+    static void RevRecStar(int no){
+
+
+    }
 
     public static void main(String[] args) {
+
+        RecStar(4);
+
         int a=8;
        // table(a);
        // star(a);
@@ -75,18 +161,29 @@ public class Ch7_practic {
 
        int rno = Recno(2);
         System.out.println("natural no recursion  "+rno);
-
         RevStar(4);
-
-        //nth term for fechnoi series -- recursion
-
-
         avg(2,3);
 
 
-        //recursion approch for star ==
+        //n=1,2,3,4,5
+       int x =  RecSum( 5);
+        System.out.println("natural RevRec  "+x);
 
+        //nth term for fechnoi series -- recursion
+        x=  f( 6);
+        System.out.println("febo nth no  "+x);
+
+
+        printFibonacci(5);
+
+
+
+
+        //recursion approch for star =
 
     }
+
+
+
 
 }

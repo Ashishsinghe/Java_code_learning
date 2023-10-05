@@ -13,7 +13,9 @@
         return salary;
     }
 
-}
+     public void id(int i) {
+     }
+ }
 public class ch8_Oops {
     public static void main(String[] args) {
         System.out.println("HI OOPS");
@@ -21,7 +23,7 @@ public class ch8_Oops {
         Employee ravi = new Employee();
         Employee Ashe = new Employee();
 
-        ravi.id =1;
+        ravi.id(1);
         ravi.salary=30;
         ravi.name ="R";
 
